@@ -1,0 +1,22 @@
+DELETE http://localhost:3001/api/persons/622a23b6838a330054983021
+
+###
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "Valeriooosoo",
+    "number" : "123-123123213"
+}
+
+### 
+GET http://localhost:3001/api/persons
+
+
+###
+PUT http://localhost:3001/api/persons/622a2389fca1542a13d9a0fb
+Content-Type: application/json
+
+{
+    "name" : "Matze Schröder"
+}
