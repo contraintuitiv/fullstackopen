@@ -1,5 +1,8 @@
 const Blog = require('../models/blog')
 const User = require('../models/user')
+const supertest = require('supertest')
+const app = require('../app')
+const api = supertest(app)
 
 const initialBlogs = [
   {
@@ -42,7 +45,7 @@ const initialUsers = [
   {
     'username': 'valentin',
     'name': 'Valentin Dietrich',
-    'password': 'dont tell anyone'
+    'password': 'dontTellAnyone'
   },
   {
     'username': 'hellas',
@@ -50,6 +53,12 @@ const initialUsers = [
     'password': 'supersecure'
   }
 ]
+
+const loginFirstUser = async () => {
+  return await api
+    .post('/api/login')
+    .send(initialUsers[0])
+}
 
 const dummyUser =   {
   'username': 'blauba',
@@ -65,5 +74,5 @@ const usersInDb = async () => {
 
 module.exports = {
   initialBlogs, blogsInDb, singleNewBlog,
-  initialUsers, usersInDb, dummyUser
+  initialUsers, usersInDb, dummyUser, loginFirstUser
 }

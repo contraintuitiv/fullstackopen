@@ -1,10 +1,10 @@
 POST http://localhost:3003/api/blogs
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhzYSIsImlkIjoiNjI0OGM5NWQ4NGMxZGE4ZjJhMjNlZmYxIiwiaWF0IjoxNjQ4OTg2ODQyLCJleHAiOjE2NDg5OTA0NDJ9.9pauaw1LboX7ofV9Mo5o6QRvC1QuNwsdkzyLsjMSjyA
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZhbGVudGluIiwiaWQiOiI2MjQ4OGRmMTRiNWY4NzQ4MDQ0Njk1ZjciLCJpYXQiOjE2NDg5OTEwOTQsImV4cCI6MTY0ODk5NDY5NH0.J6bcxu9XGZGr-abI088eJew4G_3IyHyRpRRW0WGvXJs
 
 {
-  "title": "wohnblog2",
-  "author": "Lorena",
+  "title": "Vales Blog",
+  "author": "Vale",
   "url": "http://wohnblog.de",
   "likes": 0
 }
@@ -50,6 +50,10 @@ POST http://localhost:3003/api/login
 Content-Type: application/json
 
 {
-  "username": "hsa",
-  "password": "greece"
+  "username": "valentin",
+  "password": "dietrich"
 }
+
+###
+DELETE http://localhost:3003/api/blogs/62499b86476bbc413d0e05f4
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZhbGVudGluIiwiaWQiOiI2MjQ4OGRmMTRiNWY4NzQ4MDQ0Njk1ZjciLCJpYXQiOjE2NDg5OTExMzQsImV4cCI6MTY0ODk5NDczNH0.t9ZfmJER1SXoDn0FQtcJZPRf9CT_OmZPSsFuC1bv2Yw

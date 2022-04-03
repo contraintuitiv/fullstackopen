@@ -4,10 +4,13 @@ const helper = require('./test_helper')
 const app = require('../app')
 const api = supertest(app)
 const Blog = require('../models/blog')
+const User = require('../models/user')
 
 beforeEach(async () => {
   await Blog.deleteMany({})
   await Blog.insertMany(helper.initialBlogs)
+  await User.deleteMany({})
+  await User.insertMany(helper.initialUsers)
 })
 
 
@@ -28,8 +31,18 @@ describe('bloglist', () => {
 
 })
 
-describe('a new blog post', () => {
+describe('a new blogpost', () => {
   test('can succesfully be added', async () => {
+
+    const loggedInUser = await api
+      .post('/api/login')
+      .send(helper.initialUsers[0])
+      .expect(200)
+
+    console.log('loggedInUser', loggedInUser)
+
+    helper.singleNewBlog.user = loggedInUser
+
     await api
       .post('/api/blogs')
       .send(helper.singleNewBlog)

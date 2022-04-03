@@ -10,6 +10,13 @@ beforeEach(async () => {
   await User.insertMany(helper.initialUsers)
 })
 
+test('userlogin works', async () => {
+  await api
+    .post('/api/login')
+    .send({ 'username': 'valentin', 'password': 'dontTellAnyone' })
+    .expect(200)
+})
+
 
 describe('create user', () => {
   test('works if all conditions are met', async () => {
