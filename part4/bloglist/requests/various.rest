@@ -1,0 +1,55 @@
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhzYSIsImlkIjoiNjI0OGM5NWQ4NGMxZGE4ZjJhMjNlZmYxIiwiaWF0IjoxNjQ4OTg2ODQyLCJleHAiOjE2NDg5OTA0NDJ9.9pauaw1LboX7ofV9Mo5o6QRvC1QuNwsdkzyLsjMSjyA
+
+{
+  "title": "wohnblog2",
+  "author": "Lorena",
+  "url": "http://wohnblog.de",
+  "likes": 0
+}
+
+###
+GET http://localhost:3003/api/blogs
+
+###
+PUT http://localhost:3003/api/blogs/62404eea69c7815f882ffd3f
+Content-Type: application/json
+
+{ 
+  "likes":13 
+}
+
+###
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+  "username": "valentin",
+  "name": "Valentin Dietrich",
+  "password": "dietrich"
+}
+
+###
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+  "username": "hsa",
+  "name": "Arto Hellas",
+  "password": "greece"
+}
+
+
+###
+GET http://localhost:3003/api/users
+
+
+###
+POST http://localhost:3003/api/login 
+Content-Type: application/json
+
+{
+  "username": "hsa",
+  "password": "greece"
+}
