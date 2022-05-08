@@ -1,0 +1,21 @@
+PUT http://localhost:3000/api/blogs/624987f169ced9beb961ddb8
+Content-Type: application/json
+
+{
+  "title": "wohnblog",
+  "author": "Lorena",
+  "url": "http://wohnblog.de",
+  "likes": 12,
+  "user": "62488df14b5f8748044695f7",
+  "id": "624987f169ced9beb961ddb8"
+}
+
+###
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+    "username": "user",
+    "name": "User",
+    "password": "password"
+}
