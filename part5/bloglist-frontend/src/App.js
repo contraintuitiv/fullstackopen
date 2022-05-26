@@ -106,9 +106,9 @@ const App = () => {
       <div>
         <Notification message={errorMessage} type="error" />
         <form method="post" onSubmit={loginHandler}>
-          <input type="text" placeholder="Username" value={username} onChange={({ target }) => setUsername(target.value)} />
-          <input type="password" placeholder="Password" value={password} onChange={({ target }) => setPassword(target.value)} />
-          <button type="submit">login</button>
+          <input type="text" id="username" placeholder="Username" value={username} onChange={({ target }) => setUsername(target.value)} />
+          <input type="password" id="password" placeholder="Password" value={password} onChange={({ target }) => setPassword(target.value)} />
+          <button type="submit" id="login-button">login</button>
         </form>
       </div>)
   }

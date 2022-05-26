@@ -20,9 +20,9 @@ const CreateBlog = ({ createBlog }) => {
   return(<div>
     <form onSubmit={addBlog}>
       <h3>create new blog</h3>
-      <input type="text" placeholder="Title" value={title} onChange={({ target }) => setTitle(target.value)} />
-      <input type="text" placeholder="Author" value={author} onChange={({ target }) => setAuthor(target.value)} />
-      <input type="text" placeholder="URL" value={url} onChange={({ target }) => setUrl(target.value)} />
+      <input type="text" id="input-title" placeholder="Title" value={title} onChange={({ target }) => setTitle(target.value)} />
+      <input type="text" id="input-author" placeholder="Author" value={author} onChange={({ target }) => setAuthor(target.value)} />
+      <input type="text" id="input-url" placeholder="URL" value={url} onChange={({ target }) => setUrl(target.value)} />
       <button type="submit">add</button>
     </form>
   </div>)

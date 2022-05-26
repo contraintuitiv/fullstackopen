@@ -8,7 +8,7 @@ const Blog = ({ blog, likeBlog, deleteBlog, deleteVisible }) => {
 
       <Togglable buttonLabel="view" closeButtonLabel="hide">
         <p className='author'>{blog.author}</p>
-        <div>likes:</div> {blog.likes}
+        <div>likes:</div> <div className='likeCounter'>{blog.likes || 0}</div>
         {deleteVisible?<button onClick={() => deleteBlog(blog.id)}>delete</button>:''}
       </Togglable><br /><br />
 
