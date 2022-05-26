@@ -31,3 +31,5 @@ test('check, that the form calls the event handler with right details', async ()
   expect(createBlog.mock.calls[0][0]['url']).toBe('walblog.de')
 
 })
+
+test()
