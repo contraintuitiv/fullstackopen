@@ -17,6 +17,12 @@ export const { setNotificationText } = notificationSlice.actions
 export const setNotification = (message, time=5) => {
     return dispatch => {
         dispatch(setNotificationText(message))
+        let timeoutId = window.setTimeout(function() {}, 0);
+
+        while (timeoutId--) {
+            window.clearTimeout(timeoutId);
+        }
+        
         window.setTimeout(() => dispatch(setNotificationText('')), time*1000)
     }
 }
